@@ -1,0 +1,308 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Navigation Bar */
+header {
+    background-color: #333;
+    padding: 1em 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow items to wrap */
+}
+
+nav ul li {
+    position: relative;
+    margin: 0 10px; /* Reduced margin for smaller screens */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em; /* Adjusted font size for better fit */
+    padding: 8px; /* Adjusted padding for smaller screens */
+}
+
+nav ul li a:hover {
+    color: #ff6347;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('c:/Users/LOYAL/Downloads/pexels-godisable-jacob-226636-794063.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 100px 20px; /* Adjusted padding for smaller screens */
+    color: #4d3e3e;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 2.5em; /* Adjusted size */
+    margin: 0;
+    color: white;
+}
+
+.hero p {
+    font-size: 1.2em; /* Adjusted size */
+    margin: 10px 0; /* Adjusted margin */
+    color: white;
+}
+
+.cta-button {
+    padding: 10px 20px; /* Adjusted padding */
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1em; /* Adjusted font size */
+}
+
+.cta-button:hover {
+    background-color: #ff4500;
+}
+
+/* About Section */
+#about {
+    text-align: center;
+    padding: 40px 10px; /* Reduced padding */
+    background-color: #fff;
+}
+
+#about h2 {
+    font-size: 2em; /* Adjusted size */
+    margin-bottom: 20px; /* Reduced margin */
+}
+
+#about p {
+    font-size: 1em; /* Adjusted size */
+    line-height: 1.6; /* Slightly increased line height */
+    margin: 0 auto;
+    max-width: 90%; /* Responsive width */
+}
+
+/* Portfolio Section */
+.portfolio-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow items to wrap */
+    gap: 10px; /* Reduced gap */
+    padding: 40px 10px; /* Reduced padding */
+    background-color: #f9f9f9;
+}
+
+.portfolio-item {
+    flex: 1 1 200px; /* Allow for smaller widths */
+    background-color: #fff;
+    padding: 10px; /* Reduced padding */
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.portfolio-item img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.portfolio-item h3 {
+    margin: 10px 0; /* Reduced margin */
+}
+
+.portfolio-item p {
+    font-size: 0.9em; /* Reduced font size */
+    line-height: 1.4; /* Slightly decreased line height */
+}
+
+/* Services Section */
+.service-grid {
+    display: flex;
+    justify-content: center; /* Center the grid */
+    flex-wrap: wrap; /* Allow wrapping */
+    padding: 40px 10px; /* Reduced padding */
+    background-color: #fff;
+}
+
+.service-item {
+    flex: 1 1 200px; /* Allow for smaller widths */
+    text-align: center;
+    margin: 10px; /* Added margin for spacing */
+}
+
+.service-item h3 {
+    font-size: 1.5em; /* Adjusted size */
+    margin-bottom: 10px; /* Reduced margin */
+}
+
+.service-item p {
+    font-size: 0.9em; /* Reduced size */
+    line-height: 1.4; /* Slightly decreased line height */
+}
+
+/* Contact Section */
+#contact {
+    padding: 40px 10px; /* Reduced padding */
+    background-color: #8e3e3e;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2em; /* Adjusted size */
+    margin-bottom: 20px; /* Reduced margin */
+}
+
+form {
+    max-width: 90%; /* Responsive width */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 1em; /* Adjusted size */
+    margin-top: 10px; /* Reduced margin */
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 8px; /* Reduced padding */
+    margin: 10px 0;
+    border: 1px solid #703c3c;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 15px; /* Adjusted padding */
+    background-color: #9096b7;
+    color: rgb(2, 0, 0);
+    border: none;
+    cursor: pointer;
+    font-size: 1em; /* Adjusted size */
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #c4bed6;
+}
+
+/* Footer */
+footer {
+    background-color: #b6abab;
+    color: #0c0101;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.2em; /* Adjusted size */
+    }
+
+    .hero p {
+        font-size: 1em; /* Adjusted size */
+    }
+
+    .cta-button {
+        font-size: 0.9em; /* Adjusted size */
+    }
+
+    .portfolio-item,
+    .service-item {
+        flex: 1 1 calc(50% - 20px); /* Two items per row */
+    }
+
+    form {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul li {
+        margin: 5px 0; /* Space between menu items */
+    }
+
+    .portfolio-item,
+    .service-item {
+        flex: 1 1 100%; /* One item per row */
+    }
+
+    .hero h1 {
+        font-size: 1.8em; /* Adjusted size */
+    }
+
+    .hero p {
+        font-size: 0.9em; /* Adjusted size */
+    }
+}
+
+/* Specific adjustments for iPhone SE and similar small devices */
+@media (max-width: 375px) {
+    nav ul li {
+        margin: 3px 0; /* Smaller margin for tighter spacing */
+    }
+
+    .hero {
+        padding: 80px 10px; /* Less padding for hero */
+    }
+
+    .hero h1 {
+        font-size: 1.6em; /* Further reduced size */
+    }
+
+    .hero p {
+        font-size: 0.8em; /* Further reduced size */
+    }
+
+    .cta-button {
+        font-size: 0.8em; /* Further reduced size */
+    }
+
+    .portfolio-item,
+    .service-item {
+        flex: 1 1 100%; /* One item per row */
+        margin: 5px 0; /* Added margin */
+    }
+
+    #about h2,
+    #contact h2 {
+        font-size: 1.8em; /* Reduced size */
+    }
+
+    #about p,
+    .service-item p {
+        font-size: 0.8em; /* Further reduced size */
+    }
+}
