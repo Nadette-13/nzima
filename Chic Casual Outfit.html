@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chic Casual Outfit Collection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ff6f61; /* Change title color */
+            margin-bottom: 20px;
+        }
+
+        .dress-collection {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .dress-item {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .dress-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .dress-item h2 {
+            font-size: 1.5rem;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .dress-item p {
+            color: #777;
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #000;
+        }
+
+        .buy-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #1a73e8;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .buy-button:hover {
+            background-color: #0056b3;
+        }
+
+        .dress-item label {
+            font-size: 0.9rem;
+            color: #555;
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        .dress-item select {
+            padding: 8px;
+            width: 100%;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        .payment-option {
+            margin-top: 10px;
+            color: #333;
+            font-size: 1rem;
+        }
+
+        .feedback-message {
+            margin-top: 15px;
+            color: green;
+            font-size: 1rem;
+            display: none; /* Hidden by default */
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Chic Casual Outfit Collection</h1>
+
+        <div class="dress-collection">
+            <!-- Dress Item 1 -->
+            <div class="dress-item">
+                <img src="c:\Users\LOYAL\Downloads\dress1.jpeg" alt="Chic Casual Dress">
+                <h2>Chic Casual</h2>
+                <p>African short dress for parties.</p>
+                <label for="size1">Select Size:</label>
+                <select id="size1" name="size">
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                </select>
+                <p class="price">$299.99</p>
+                <p>Estimated Delivery: 3-5 business days</p>
+
+                <!-- Payment Options -->
+                <div class="payment-option">
+                    <label for="payment1">Payment Method:</label>
+                    <select id="payment1">
+                        <option value="credit">Credit Card</option>
+                        <option value="paypal">PayPal</option>
+                        <option value="bank">Bank Transfer</option>
+                    </select>
+                </div>
+
+                <a href="#" class="buy-button" onclick="confirmPurchase('feedback1')">Buy Now</a>
+                <div id="feedback1" class="feedback-message"></div>
+            </div>
+
+            <!-- Dress Item 2 -->
+            <div class="dress-item">
+                <img src="c:\Users\LOYAL\Downloads\casual2.jpeg" alt="Chic Casual Dress">
+                <h2>Chic Casual</h2>
+                <p>Summer casual outfit for you.</p>
+                <label for="size2">Select Size:</label>
+                <select id="size2" name="size">
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                </select>
+                <p class="price">$149.99</p>
+                <p>Estimated Delivery: 2-4 business days</p>
+
+                <!-- Payment Options -->
+                <div class="payment-option">
+                    <label for="payment2">Payment Method:</label>
+                    <select id="payment2">
+                        <option value="credit">Credit Card</option>
+                        <option value="paypal">PayPal</option>
+                        <option value="bank">Bank Transfer</option>
+                    </select>
+                </div>
+
+                <a href="#" class="buy-button" onclick="confirmPurchase('feedback2')">Buy Now</a>
+                <div id="feedback2" class="feedback-message"></div>
+            </div>
+
+            <!-- Dress Item 3 -->
+            <div class="dress-item">
+                <img src="c:\Users\LOYAL\Downloads\casual3.jpeg" alt="Chic Casual T-Shirt">
+                <h2>Chic Casual</h2>
+                <p>Casual T-shirt for girls.</p>
+                <label for="size3">Select Size:</label>
+                <select id="size3" name="size">
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                </select>
+                <p class="price">$129.99</p>
+                <p>Estimated Delivery: 1-3 business days</p>
+
+                <!-- Payment Options -->
+                <div class="payment-option">
+                    <label for="payment3">Payment Method:</label>
+                    <select id="payment3">
+                        <option value="credit">Credit Card</option>
+                        <option value="paypal">PayPal</option>
+                        <option value="bank">Bank Transfer</option>
+                    </select>
+                </div>
+
+                <a href="#" class="buy-button" onclick="confirmPurchase('feedback3')">Buy Now</a>
+                <div id="feedback3" class="feedback-message"></div>
+            </div>
+
+            <!-- Dress Item 4 -->
+            <div class="dress-item">
+                <img src="c:\Users\LOYAL\Downloads\casual4.jpeg" alt="Stylish Jumpsuit">
+                <h2>Stylish Jumpsuit</h2>
+                <p>Perfect for casual outings or brunch.</p>
+                <label for="size4">Select Size:</label>
+                <select id="size4" name="size">
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                </select>
+                <p class="price">$249.99</p>
+                <p>Estimated Delivery: 4-6 business days</p>
+
+                <!-- Payment Options -->
+                <div class="payment-option">
+                    <label for="payment4">Payment Method:</label>
+                    <select id="payment4">
+                        <option value="credit">Credit Card</option>
+                        <option value="paypal">PayPal</option>
+                        <option value="bank">Bank Transfer</option>
+                        <option value="MTN MoMo">MTN MoMo</option>
+                    </select>
+                </div>
+
+                <a href="#" class="buy-button" onclick="confirmPurchase('feedback4')">Buy Now</a>
+                <div id="feedback4" class="feedback-message"></div>
+            </div>
+
+            <!-- Dress Item 5 -->
+            <div class="dress-item">
+                <img src="c:\Users\LOYAL\Downloads\casual5.jpeg" alt="Trendy Skirt">
+                <h2>Trendy Skirt</h2>
+                <p>Stylish skirt perfect for summer.</p>
+                <label for="size5">Select Size:</label>
+                <select id="size5" name="size">
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                </select>
+                <p class="price">$99.99</p>
+                <p>Estimated Delivery: 2-4 business days</p>
+
+                <!-- Payment Options -->
+                <div class="payment-option">
+                    <label for="payment5">Payment Method:</label>
+                    <select id="payment5">
+                        <option value="credit">Credit Card</option>
+                        <option value="paypal">PayPal</option>
+                        <option value="bank">Bank Transfer</option>
+                    </select>
+                </div>
+
+                <a href="#" class="buy-button" onclick="confirmPurchase('feedback5')">Buy Now</a>
+                <div id="feedback5" class="feedback-message"></div>
+            </div>
+
+            <!-- Dress Item 6 -->
+            <div class="dress-item">
+                <img src="c:\Users\LOYAL\Downloads\casual6.jpeg" alt="Casual Top">
+                <h2>Casual Top</h2>
+                <p>Perfect for layering or wearing solo.</p>
+                <label for="size6">Select Size:</label>
+                <select id="size6" name="size">
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                </select>
+                <p class="price">$89.99</p>
+                <p>Estimated Delivery: 1-3 business days</p>
+
+                <!-- Payment Options -->
+                <div class="payment-option">
+                    <label for="payment6">Payment Method:</label>
+                    <select id="payment6">
+                        <option value="credit">Credit Card</option>
+                        <option value="paypal">PayPal</option>
+                        <option value="bank">Bank Transfer</option>
+                    </select>
+                </div>
+
+                <a href="#" class="buy-button" onclick="confirmPurchase('feedback6')">Buy Now</a>
+                <div id="feedback6" class="feedback-message"></div>
+            </div>
+
+            <!-- Additional dress items can be added here following the same format -->
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Nzima Fashion. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function confirmPurchase(feedbackId) {
+            const feedbackMessage = document.getElementById(feedbackId);
+            feedbackMessage.textContent = "Thank you for your purchase! We will process your order and send you a confirmation email shortly.";
+            feedbackMessage.style.display = "block"; // Show the feedback message
+
+            // Optionally clear the message after a few seconds
+            setTimeout(() => {
+                feedbackMessage.style.display = "none"; // Hide it again after 5 seconds
+            }, 5000);
+        }
+    </script>
+
+</body>
+</html>

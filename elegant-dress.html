@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nzima Fashion</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ff6f61; /* Change title color */
+            margin-bottom: 20px;
+        }
+
+        .dress-collection {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .dress-item {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .dress-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .dress-item h2 {
+            font-size: 1.5rem;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .dress-item p {
+            color: #777;
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #000;
+        }
+
+        /* Size Dropdown and Delivery */
+        label {
+            font-size: 1rem;
+            color: #333;
+            margin-top: 10px;
+            display: block;
+        }
+
+        select {
+            padding: 8px;
+            font-size: 1rem;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            margin-top: 5px;
+        }
+
+        .delivery-time {
+            color: #555;
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+
+        .buy-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #1a73e8;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .buy-button:hover {
+            background-color: #0056b3;
+        }
+
+        .feedback-message {
+            margin-top: 15px;
+            color: green;
+            font-size: 1rem;
+            display: none; /* Hidden by default */
+        }
+
+        .payment-option {
+            margin-top: 10px;
+            color: #333;
+            font-size: 1rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Nzima Fashion</h1>
+
+        <div class="dress-collection">
+            <!-- Dress Item 1 -->
+            <div class="dress-item">
+                <img src="c:\Users\LOYAL\Downloads\dress1.jpeg" alt="Elegant Evening Dress">
+                <h2>Elegant Evening Dress</h2>
+                <p>Classic, floor-length gown perfect for formal occasions. Crafted with luxurious silk.</p>
+                <label for="size-select1">Size:</label>
+                <select id="size-select1">
+                    <option value="S">Small</option>
+                    <option value="M">Medium</option>
+                    <option value="L">Large</option>
+                    <option value="XL">Extra Large</option>
+                </select>
+                <p class="price">$299.99</p>
+                <p class="delivery-time"><strong>Estimated Delivery:</strong> 3-5 Business Days</p>
+                <div class="payment-option">
+                    <label for="payment-select1">Payment Method:</label>
+                    <select id="payment-select1">
+                        <option value="credit">Credit Card</option>
+                        <option value="paypal">PayPal</option>
+                        <option value="bank">Bank Transfer</option>
+                    </select>
+                </div>
+                <a href="#" class="buy-button" onclick="confirmPurchase('feedback-message1')">Buy Now</a>
+                <div id="feedback-message1" class="feedback-message"></div>
+            </div>
+
+            <!-- Dress Item 2 -->
+            <div class="dress-item">
+                <img src="c:\Users\LOYAL\Downloads\dress2.jpeg" alt="Chic Casual Dress">
+                <h2>Chic Casual Dress</h2>
+                <p>A stylish, versatile dress that combines comfort and elegance. Perfect for a day out.</p>
+                <label for="size-select2">Size:</label>
+                <select id="size-select2">
+                    <option value="S">Small</option>
+                    <option value="M">Medium</option>
+                    <option value="L">Large</option>
+                    <option value="XL">Extra Large</option>
+                </select>
+                <p class="price">$149.99</p>
+                <p class="delivery-time"><strong>Estimated Delivery:</strong> 3-5 Business Days</p>
+                <div class="payment-option">
+                    <label for="payment-select2">Payment Method:</label>
+                    <select id="payment-select2">
+                        <option value="credit">Credit Card</option>
+                        <option value="paypal">PayPal</option>
+                        <option value="bank">Bank Transfer</option>
+                    </select>
+                </div>
+                <a href="#" class="buy-button" onclick="confirmPurchase('feedback-message2')">Buy Now</a>
+                <div id="feedback-message2" class="feedback-message"></div>
+            </div>
+
+            <!-- Dress Item 3 -->
+            <div class="dress-item">
+                <img src="c:\Users\LOYAL\Downloads\dress3.jpeg" alt="Floral Maxi Dress">
+                <h2>Floral Maxi Dress</h2>
+                <p>Bright, flowy maxi dress with beautiful floral patterns, ideal for summer outings.</p>
+                <label for="size-select3">Size:</label>
+                <select id="size-select3">
+                    <option value="S">Small</option>
+                    <option value="M">Medium</option>
+                    <option value="L">Large</option>
+                    <option value="XL">Extra Large</option>
+                </select>
+                <p class="price">$199.99</p>
+                <p class="delivery-time"><strong>Estimated Delivery:</strong> 3-5 Business Days</p>
+                <div class="payment-option">
+                    <label for="payment-select3">Payment Method:</label>
+                    <select id="payment-select3">
+                        <option value="credit">Credit Card</option>
+                        <option value="paypal">PayPal</option>
+                        <option value="bank">Bank Transfer</option>
+                        <option value="MTN MoMo">MTN MoMo</option>
+                    </select>
+                </div>
+                <a href="#" class="buy-button" onclick="confirmPurchase('feedback-message3')">Buy Now</a>
+                <div id="feedback-message3" class="feedback-message"></div>
+            </div>
+
+            <!-- Dress Item 4 -->
+            <div class="dress-item">
+                <img src="c:\Users\LOYAL\Downloads\dress4.jpeg" alt="Office Wear Dress">
+                <h2>Office Wear Dress</h2>
+                <p>Tailored dress designed for a professional look, perfect for office settings.</p>
+                <label for="size-select4">Size:</label>
+                <select id="size-select4">
+                    <option value="S">Small</option>
+                    <option value="M">Medium</option>
+                    <option value="L">Large</option>
+                    <option value="XL">Extra Large</option>
+                </select>
+                <p class="price">$129.99</p>
+                <p class="delivery-time"><strong>Estimated Delivery:</strong> 3-5 Business Days</p>
+                <div class="payment-option">
+                    <label for="payment-select4">Payment Method:</label>
+                    <select id="payment-select4">
+                        <option value="credit">Credit Card</option>
+                        <option value="paypal">PayPal</option>
+                        <option value="bank">Bank Transfer</option>
+                    </select>
+                </div>
+                <a href="#" class="buy-button" onclick="confirmPurchase('feedback-message4')">Buy Now</a>
+                <div id="feedback-message4" class="feedback-message"></div>
+            </div>
+
+            <!-- Dress Item 5 -->
+            <div class="dress-item">
+                <img src="c:\Users\LOYAL\Downloads\dress5.jpeg" alt="Bohemian Dress">
+                <h2>Bohemian Dress</h2>
+                <p>Relaxed-fit dress with a unique bohemian style, great for festivals and vacations.</p>
+                <label for="size-select5">Size:</label>
+                <select id="size-select5">
+                    <option value="S">Small</option>
+                    <option value="M">Medium</option>
+                    <option value="L">Large</option>
+                    <option value="XL">Extra Large</option>
+                </select>
+                <p class="price">$169.99</p>
+                <p class="delivery-time"><strong>Estimated Delivery:</strong> 3-5 Business Days</p>
+                <div class="payment-option">
+                    <label for="payment-select5">Payment Method:</label>
+                    <select id="payment-select5">
+                        <option value="credit">Credit Card</option>
+                        <option value="paypal">PayPal</option>
+                        <option value="bank">Bank Transfer</option>
+                    </select>
+                </div>
+                <a href="#" class="buy-button" onclick="confirmPurchase('feedback-message5')">Buy Now</a>
+                <div id="feedback-message5" class="feedback-message"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Nzima Fashion. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function confirmPurchase(feedbackId) {
+            const feedbackMessage = document.getElementById(feedbackId);
+            feedbackMessage.textContent = "Thank you for your purchase! We will process your order and send you a confirmation email shortly.";
+            feedbackMessage.style.display = "block"; // Show the feedback message
+
+            // Optionally clear the message after a few seconds
+            setTimeout(() => {
+                feedbackMessage.style.display = "none"; // Hide it again after 5 seconds
+            }, 5000);
+        }
+    </script>
+
+</body>
+</html>
